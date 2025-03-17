@@ -89,7 +89,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 IG -(https://instagram.com/shyam_matam)
 
-Project Link: [https://github.com/yourusername/ai-image-generator](https://github.com/yourusername/ai-image-generator)
+Project Link:(https://github.com/ShyamMatam/ai-image-generator)
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
