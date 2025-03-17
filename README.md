@@ -87,7 +87,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - [@yourtwitter](https://twitter.com/yadav007)
+IG -(https://instagram.com/shyam_matam)
 
 Project Link: [https://github.com/yourusername/ai-image-generator](https://github.com/yourusername/ai-image-generator)
 ## Learn More
