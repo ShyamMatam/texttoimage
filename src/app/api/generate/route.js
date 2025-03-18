@@ -12,8 +12,24 @@ const client = new OpenAI({
 
 export async function POST(req) {
     try {
-        const { prompt } = await req.json();
+        const { prompt, style } = await req.json();
 
+        // Enhance prompt based on style
+        let enhancedPrompt = prompt;
+        switch (style) {
+            case 'realistic':
+                enhancedPrompt += ', photorealistic, high detail, 8k resolution';
+                break;
+            case 'artistic':
+                enhancedPrompt += ', artistic style, oil painting, vibrant colors';
+                break;
+            case 'anime':
+                enhancedPrompt += ', anime style, manga art, cel shaded';
+                break;
+            case 'digital':
+                enhancedPrompt += ', digital art, concept art, detailed';
+                break;
+        }
 
         const response = await client.images.generate({
             model: "black-forest-labs/flux-dev",
@@ -23,10 +39,10 @@ export async function POST(req) {
                 "width": 1024,
                 "height": 1024,
                 "num_inference_steps": 28,
-                "negative_prompt": "",
+                "negative_prompt": "low quality, blurry, distorted",
                 "seed": -1
             },
-            prompt: prompt
+            prompt: enhancedPrompt
         });
 
         // Log the response to see its structure
